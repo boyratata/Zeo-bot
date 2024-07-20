@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run CommonJS Script</title>
+</head>
+<body>
+    <h1>Hello from index.html!</h1>
+    <p>The server-side script has been executed. Check the server logs for details.</p>
+    <button id="run-script">Run Script</button>
+    <p id="response"></p>
+
+    <script>
+        document.getElementById('run-script').addEventListener('click', () => {
+            fetch('/run-script')
+                .then(response => response.text())
+                .then(data => document.getElementById('response').innerText = data)
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

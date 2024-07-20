@@ -1,0 +1,14 @@
+{
+  "name": "Zeo",
+  "version": "1.0.0",
+  "description": "Run CommonJS script from HTML",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
